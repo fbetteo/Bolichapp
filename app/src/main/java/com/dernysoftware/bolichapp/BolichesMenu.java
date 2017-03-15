@@ -8,16 +8,19 @@ import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
+import static com.dernysoftware.bolichapp.MainMenu.dbBoliches;
+
 
 public class BolichesMenu extends BaseActivity {
 
-    BolicheManager bolicheManager = new BolicheManager();
+
+    //BolicheManager bolicheManager = new BolicheManager();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_boliches_menu);
-        bolicheManager.populate();
+        //dbBoliches.populateArray();
         setList();
     }
 
@@ -27,7 +30,7 @@ public class BolichesMenu extends BaseActivity {
 
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
-        ListAdapter adapter = new ArrayAdapter<Boliche>(this,android.R.layout.simple_list_item_multiple_choice, bolicheManager.getBoliches());
+        ListAdapter adapter = new ArrayAdapter<Boliche>(this,android.R.layout.simple_list_item_multiple_choice, dbBoliches.getBoliches());
 
         listView.setAdapter(adapter);
 

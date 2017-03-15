@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class MainMenu extends BaseActivity {
 
     TextView myText;
-    DBexterna dbBoliches; //creas un objeto DBexterna
+    public static DBexterna dbBoliches; //creas un objeto DBexterna
 
 
     @Override

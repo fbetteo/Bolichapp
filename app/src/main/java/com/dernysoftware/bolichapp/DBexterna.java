@@ -22,7 +22,7 @@ public class DBexterna extends SQLiteAssetHelper{
     }
 
 
-    public ArrayList<Boliche> bolichesArray = new ArrayList<Boliche>();
+    public static ArrayList<Boliche> bolichesArray = new ArrayList<Boliche>();
     private String name;
     private String address;
     private String facebookPage;
@@ -51,7 +51,7 @@ public class DBexterna extends SQLiteAssetHelper{
         }
         db.close();
     }
-    public ArrayList<Boliche> getBoliches() {
+    public static ArrayList<Boliche> getBoliches() {
         return bolichesArray;
     }
 
